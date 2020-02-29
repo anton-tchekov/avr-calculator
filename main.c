@@ -98,7 +98,6 @@ enum PGM_STRING
 	STR_START,
 	STR_STEP,
 	STR_ERROR,
-	STR_NO_UNKNOWNS,
 };
 
 /* Character values for pi and div are taken
@@ -195,7 +194,6 @@ static uint8_t op_stack[OPERATOR_STACK_SIZE];
 static float num_stack[NUMBER_STACK_SIZE];
 static uint8_t tok_type_list[TOKEN_LIST_SIZE];
 static float tok_num_list[TOKEN_LIST_SIZE];
-
 
 static uint8_t _buf_conv[LCD_WIDTH + 1];
 
@@ -299,7 +297,7 @@ int main(void)
 	sei();
 
 	/* Reduce power usage by disabling unused modules
-	and enabling sleep modes*/
+	and enabling sleep modes */
 	power_adc_disable();
 	power_spi_disable();
 	power_twi_disable();
@@ -1184,7 +1182,7 @@ static uint8_t calc_prepare(uint8_t *term)
 		shunting yard algorithm */
 		if(isop)
 		{
-			/* Any operator: pop all operators from
+			/* Any operator: Pop all operators from
 			the stack that have a lower precedence */
 			uint8_t precedence, tmp;
 			precedence = get_precedence(cur_type);
