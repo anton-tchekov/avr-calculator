@@ -1,6 +1,6 @@
 # avr-calculator
 
-![alt text](outside.png)
+![alt text](c.jpeg)
 
 ### Input mode:
 Key map:
