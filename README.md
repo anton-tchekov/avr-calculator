@@ -1,5 +1,7 @@
 # avr-calculator
 
+![alt text](outside.png)
+
 ### Input mode:
 Key map:
 ```
