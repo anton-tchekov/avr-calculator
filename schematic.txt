@@ -2,7 +2,7 @@ MCU: ATMega168 @ 8MHz (Internal Oscillator [CLKDIV8 Fuse is disabled])
 
 RESET--<10k>--VCC
 
-         +--- 100 nF bypass capacitor
+         +--- 100 nF Decoupling
          |
          V
 
